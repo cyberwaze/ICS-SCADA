@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Top-level nav menu ... this is clunky but avoids php --!>
+<nav>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Basics</a>
+    <div class="dropdown-content">
+      <a href="terms.html">Terms</a>
+      <a href="scadagen.html">Generations</a>
+	  <a href="scadaQs.html">Open Questions</a>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Resources</a>
+    <div class="dropdown-content">
+      <a href="scadacerts.html">Degrees & Certifications</a>
+      <a href="scadatng.html">Trainings</a>
+	  <a href="scadatools.html">Tools</a>
+      <a href="scadalinks.html">Site Links</a>
+    </div>
+  </li>
+  <li><a href="faqs.html">FAQs</a></li>
+  <li><a href="contact.html">Contacts</a></li>
+</ul>
+</nav>
+<!-- end of Top-level nav menu --!>
+
+
+<a href="index.html">Home</a> >> Basics >> Terms
+<h3>Explore some key terms and definitions associated with ICS/SCADA.</h3>
+
+<!-- this toggles each question independently via the script --!>
+<!-- ref - http://www.w3schools.com/howto/howto_js_accordion.asp --!>
+
+<!-- Terms and Definitions go here --!>
+
+<p class="accordion"><b>Distributed Control System</b></p>
+<div class="panel">Describes a SCADA architecture in which the data acquisition and control functions are performed by 
+microprocessor-based units distributed throughout the process/network, and situated closer to the devices being controlled or the instruments 
+from which data are being gathered, than they are to the central/master station. DCS systems often provide
+very sophisticated analog (loop) control capabilities, and a tightly integrated set of operator interfaces 
+(MMIs) that allow for easy system configurations and operator control.
+<p style="text-align:center;"><img src="./graphics/typical-dcs.gif" width="600 height="400" alt="Typical Distributed Control System Graphic"></p>
+</div>
+
+<p class="accordion"><b>Distributed Processing</b></p>
+<div class="panel">Refers to the use of multiple individual central processing units (CPU) to work on the same program, function or system 
+to deliver capability more quickly and efficiently. 
+</div>
+
+<p class="accordion"><b>Human Machine Interface (HMI)</b></p>
+<div class="panel">A software application that presents information to an operator or user about the state of a process, and accepts and implements 
+operators' control instructions.
+</div>
+
+<p class="accordion"><b>Industrial Control System (ICS)</b></p>
+<div class="panel">A combinations of control components (e.g., electrical, mechanical, hydraulic, pneumatic) that act together to achieve an industrial 
+objective (e.g., manufacturing, transportation of matter or energy).
+</div>
+
+<p class="accordion"><b>Industrial Internet of Things (IIoT)</b></p>
+<div class="panel">Refers to the use of smart sensors and actuators to enhance manufacturing and industrial processes, generally capturing and analyzing data 
+in real-time to drive business decisions faster and more accurately.
+</div>
+
+<p class="accordion"><b>Local Area Network (LAN)</b></p>
+<div class="panel">Hardware and computing devices interconnected through communication channels (e.g., wires, optic cables, WiFi) 
+to share resources within a limited area such as a residence, campus or office building. For example, a LAN might be used in a
+utility plant for RTU communications to the Master given the short distances involved. 
+<p style="text-align:center;"><img src="./graphics/lan-wan.jpg" width="600" height="350" alt="Typical Wide Area Network Graphic"></p> 
+</div>
+
+<p class="accordion"><b>Open Protocol</b></p>
+<div class="panel">Indicates that a given vendor's products can readily communicate with other vendors' products without the use of a
+special interface or gateway.  
+</div>
+
+<p class="accordion"><b>Open Architecture</b></p>
+<div class="panel">An infrastructure whose specifications are public as opposed to proprietary, to encourage third-party vendors to develop add-ons. 
+</div>
+
+<p class="accordion"><b>Programmable Logic Controller (PLC)</b></p>
+<div class="panel">PLCs receive information from connected sensors or input devices, process the data, and trigger outputs based on pre-programmed 
+parameters. PLCs have replaced hardwired relays with a combination of ladder–logic software and solid state electronic 
+input and output modules. PLCs often are used in the implementation of RTUs because they offer a standard, cost-effective 
+hardware solution. PLCs have some overlaps with RTUs, but PLCs are better with local controls, for example, production lines or plants.
+<p style="text-align:center;"><img src="./graphics/plc-system.gif" width="600" height="360" alt="PLC System Graphic"></p>
+</div>
+
+<p class="accordion"><b>Proprietary Protocol</b></p>
+<div class="panel">Indicates that a given vendor's products cannot readily communicate with other vendors' products without the use of a
+special interface or gateway. Also called a <i>closed protocol</i>.
+</div>
+
+<p class="accordion"><b>Remote Terminal (or Telemetry) Unit (RTU)</b></p>
+<div class="panel">A standalone data acquisition and control unit - generally microprocessor based - that monitors,
+controls and acquires data from process equipment at a remote location and  transfers this data back to a central station.
+In some cases the RTU might communicate on a peer-to-peer basis with other RTUs, or act as a "store and forward" relay station 
+for data from another RTU that may be inaccessible to the central station. RTUs have some functional overlaps with PLCs, but
+RTUs are considered more suitable for wider geographical telemetry due to their wireless capabilities.
+<p style="text-align:center;"><img src="./graphics/typical-rtu.gif" width="500" height="500" alt="Typical RTU Graphic"></p>
+</div>
+
+<p class="accordion"><b>Smart Instrument</b></p>
+<div class="panel">An intelligent (microprocessor based) digital measuring sensor (such as a flow meter) with digital data
+communications provided to some diagnostic panel or computer based system. Both PLCs and DCS systems can interface to it. 
+<p style="text-align:center;"><img src="./graphics/typical-smart-instrument.gif" width="500" height="250" alt="Typical Smart Instrument Graphic"></p>
+</div>
+
+<p class="accordion"><b>Supervisory Control and Data Acquisition (SCADA)</b></p>
+<div class="panel">A system of software and hardware elements that allows organizations to:
+<br>* Control industrial processes locally or at remote locations
+<br>* Monitor, gather and process real-time data
+<br>* Directly interact with devices such as sensors, valves, pumps and motors through human-machine interface (HMI) software
+<br>* Record events into log files
+<br><br>In a typical SCADA system there usually are five levels or hierarchies:
+<br>* Field level instrumentation and control devices
+<br>* Terminals and RTUs
+<br>* Communications system
+<br>* Master station(s)
+<br>* Commercial data processing computer system(s)
+<p style="text-align:center;"><img src="./graphics/typical-scada-system.gif" width="600" height="650" alt="Typical SCADA System Graphic"></p>
+</div>
+
+<p class="accordion"><b>Wide Area Network (WAN)</b></p>
+<div class="panel">Interconnected hardware and computing devices that extend over a large geographical distance and often employ
+leased telecommunication lines to allows an enterprise to effectively carry out its daily automated processes regardless of location. 
+WAN technology is used in SCADA architectures to help integrate information throughout the system for improved efficiency and reduced 
+operational costs. 
+<p style="text-align:center;"><img src="./graphics/lan-wan.jpg" width="600" height="350" alt="Typical Wide Area Network Graphic"></p>
+</div>
+
+<!-- end of Terms and Definitions --!>
+
+
+<style>
+/* Style the element that is used to open and close the accordion class */
+p.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 95%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom:10px;
+}
+
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+p.accordion.active, p.accordion:hover {
+    background-color: #ddd;
+}
+
+p.accordion:after {
+    content: "+"; 
+    font-size: 18px;
+    color: #000;
+    float: right;
+    margin-left: 5px;
+}
+
+p.accordion.active:after {
+    content: "-"; 
+}
+
+/* Style the element that is used for the panel class */
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    margin-bottom:10px;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 1000px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+</style>
+
+<script>
+/* Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons. The "active" class is used to add a background color to the current button when its belonging panel is open. The "show" class is used to open the specific accordion panel */
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+	};
+}
+
+</script>
+
+</body>
+</html>

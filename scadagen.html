@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Top-level nav menu ... this is clunky but avoids php --!>
+<nav>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Basics</a>
+    <div class="dropdown-content">
+      <a href="terms.html">Terms</a>
+      <a href="scadagen.html">Generations</a>
+	  <a href="scadaQs.html">Open Questions</a>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Resources</a>
+    <div class="dropdown-content">
+      <a href="scadacerts.html">Degrees & Certifications</a>
+      <a href="scadatng.html">Trainings</a>
+	  <a href="scadatools.html">Tools</a>
+      <a href="scadalinks.html">Site Links</a>
+    </div>
+  </li>
+  <li><a href="faqs.html">FAQs</a></li>
+  <li><a href="contact.html">Contacts</a></li>
+</ul>
+</nav>
+<!-- end of Top-level nav menu --!>
+
+
+<a href="index.html">Home</a> >> Basics >> Generations
+<h3>There are four key generations of ICS/SCADA.</h3>
+
+<!-- this toggles each question independently via the script --!>
+<!-- ref - http://www.w3schools.com/howto/howto_js_accordion.asp --!>
+
+<!-- Generations and descriptions go here --!>
+
+<p class="accordion"><b>Generation 1 ("Monolithic")</b></p>
+<div class="panel">First-generation SCADA systems were monolithic standalones. Connectivity was 
+limited to custom-built adapters and controllers plugged directly into a backplane. Lean, 
+proprietary communication protocols supported little functionality beyond what was required 
+to scan and control remote devices. In this generation, the control systems were not able to 
+interconnect with any other devices, and were standalone systems. This generation of SCADA 
+did not have the technology of networks as we know it today. Redundancy was accomplished by using 
+two identically equipped mainframe systems connected at the bus level.  Interconnectivity 
+between the different RTUs to the master computer was not available at this time. 
+</div>
+
+<p class="accordion"><b>Generation 2 ("Distributed")</b></p>
+<div class="panel">Second-generation SCADA systems leveraged emergent miniaturization and Local Area 
+Networking (LAN) technology to distribute processing and functionality across multiple systems sharing 
+real-time information. Protocols, still often proprietary in nature, were optimized to handle the real-time 
+data and communication traffic, thus effectively eliminating connectivity to outside networks.  More 
+common system components appeared and functionality grew. RTUs performed sophisticated calculations and 
+database servers were integrated.  Most venders created systems with proprietary protocols, which offered 
+the ability for increased speed, system reliability and real-time traffic optimization.
+</div>
+
+<p class="accordion"><b>Generation 3 ("Networked")</b></p>
+<div class="panel">Third-generation SCADA systems evolved to open system architectures rather than vendor-
+controlled, closed environments. Open protocols and standards support connecting off-the-shelf systems and 
+devices to the network, allowing virtually any peripheral device to communicate with any other connected device. 
+This facilitated monitoring devices and networks remotely and distributed functionality throughout the network. 
+</div>
+
+<p class="accordion"><b>Generation 4 ("Next Gen")</b></p>
+<div class="panel">Fourth-generation SCADA systems are being driven by cloud computing and the Industrial 
+Internet of Things (IIoT), which together enable SCADA systems to collect status in real-time even from remote sites, 
+to implement more advanced control algorithms, and to establish better security boundaries. But openness,  
+functional distributivity and data transport gains from prior generations have greatly complicated attaining 
+acceptable levels of cybersecurity.
+</div>
+
+<p class="accordion"><b>Click here to see the evolution...</b></p>
+<div class="panel">
+<p style="text-align:center;"><img src="./graphics/ScadaEvolution.png" width="975" height="375" alt="Scada Evolution Graphic"></p>
+</div>
+<!-- end of Generations and descriptions --!>
+
+
+<style>
+/* Style the element that is used to open and close the accordion class */
+p.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 95%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom:10px;
+}
+
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+p.accordion.active, p.accordion:hover {
+    background-color: #ddd;
+}
+
+p.accordion:after {
+    content: "+"; 
+    font-size: 18px;
+    color: #000;
+    float: right;
+    margin-left: 5px;
+}
+
+p.accordion.active:after {
+    content: "-"; 
+}
+
+/* Style the element that is used for the panel class */
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    margin-bottom:10px;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+</style>
+
+<script>
+/* Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons. The "active" class is used to add a background color to the current button when its belonging panel is open. The "show" class is used to open the specific accordion panel */
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+	};
+}
+
+</script>
+
+</body>
+</html>
